@@ -1,0 +1,13 @@
+ADT Stock V325 - Native Bridge Hardening
+
+Base: V324 STRUCTURAL FINAL
+Version: 3.25.0 / versionCode 325
+
+Changes:
+- Removed JavaScript exposure of the stored ADT session token. getSessionToken() is now native-private and is used only by native push dispatch.
+- Replaced generic JS-accessible secure storage (saveSecureValue/getSecureValue/clearSecureValue) with purpose-specific Realtime credential methods using fixed internal keys.
+- Realtime device-secret migration remains supported (V321 -> V322) inside native secure storage.
+- JavaScript can no longer choose arbitrary secure-storage key names through the bridge.
+- Existing saveSessionToken/clearSessionToken remain only for writing/clearing the current session; the stored value is never readable back through JavaScript.
+- Bumped Android version to 3.25.0 / 325.
+- Updated mirrored JS source artifacts for consistency.

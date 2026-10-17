@@ -1,0 +1,16 @@
+V316.0 REALTIME + SYNC HARDENING
+- Pinned supabase-js to 2.91.0.
+- Added Realtime heartbeat monitoring with a 15s heartbeat interval.
+- Realtime setup is idempotent per team; healthy channels are reused instead of being torn down by focus/resume handlers.
+- Added serialized reconnect handling and actual socket-state checks via realtime.isConnected().
+- Reconnects on CLOSED/CHANNEL_ERROR/TIMED_OUT and heartbeat timeout/disconnected states.
+- Product Realtime events now carry per-team/product watermarks using server updated_at + event receipt time.
+- An HTTP product sync cannot overwrite a newer Realtime event that arrived during the request or has a newer server version.
+- Product IndexedDB writes are serialized per team to prevent stale writes winning races.
+- Sync generation is checked before replacing the live product array.
+- Sync badge reflects actual Realtime health rather than navigator.onLine alone.
+- Focus/visibility/online recovery reuses the connection manager instead of blindly rebuilding the channel.
+- Kept protected adt_team_cloud_state security intact; no broad SELECT grant was added.
+- Added V316_REALTIME_HARDENING.sql for publication/replica-identity checks.
+- Static audit completed: 27 HTML script blocks passed Node syntax checks; critical Realtime/cache functions have a single active definition.
+- Android manifest/network hardening reviewed: cleartext HTTP disabled, no backup, HTTPS Supabase endpoint.

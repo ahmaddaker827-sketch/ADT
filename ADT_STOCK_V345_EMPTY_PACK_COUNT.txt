@@ -1,0 +1,5 @@
+ADT Stock Pro v345 — Empty pack count by default
+
+- New product form no longer pre-fills عدد القطع with 1.
+- The pack count field starts blank and requires a positive whole number when saving a product.
+- Editing existing products still displays their saved pack count.

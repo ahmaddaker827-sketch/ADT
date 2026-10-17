@@ -1,0 +1,19 @@
+ADT Stock V322.0 — Structural Security Cleanup
+
+Base: V321
+Version: versionCode 322 / versionName 3.22.0
+
+Structural changes:
+1. Session token moved out of WebView localStorage into a dedicated encrypted Android Keystore-backed preference namespace.
+2. Added one-time V321 legacy session-token migration, then legacy localStorage token is removed.
+3. Session storage is isolated from the generic JS secure-value namespace; getSecureValue() cannot read the session entry by key.
+4. FCM token is no longer copied into localStorage. Native Android storage is the source of truth; JS keeps only the current in-memory token.
+5. Removed unused local app-lock compatibility stubs that always returned true.
+6. Removed unused legacy master-lock/bypass-PIN localStorage state and cleanup references; current lock state remains server-derived.
+7. Realtime device secret key bumped to v322 with an explicit V321-to-V322 secure-storage migration, preserving existing installations without forcing a needless credential loss.
+8. Realtime credential logout cleanup clears both current and legacy secret keys.
+9. Version fallback bumped to 322.
+
+Not changed deliberately:
+- Supabase JS is still loaded from the existing jsDelivr URL because the supplied project did not contain a local copy and this build environment has no outbound DNS/network access to retrieve the exact 2.91.0 artifact. No fake/partial SDK was introduced.
+- Realtime registration RPC remains adt_realtime_register_device_v320 because changing an API name without a server-side contract change would be cosmetic, not a structural fix.

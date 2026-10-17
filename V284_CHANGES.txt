@@ -1,0 +1,6 @@
+ADT Stock V284
+- Audit cloud writes now use compare-and-swap revision protection.
+- A member with stale audit data cannot overwrite a newer manager reset.
+- After a rejected stale write, only the member's actual new/changed rows are merged onto the reset state.
+- Grocery and wholesale audit state keep their existing backups and history.
+- Version 2.84.0 / code 284.

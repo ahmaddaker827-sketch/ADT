@@ -1,0 +1,8 @@
+ADT Stock V271 (2.71.0)
+
+- Added a dedicated server check for Grocery Audit permission.
+- Removed the conflicting feature-state dependency from the Grocery Audit button.
+- The last confirmed permission remains stable while synchronization is running.
+- The button changes only after the server explicitly confirms permission enabled or disabled.
+
+Run V271_GROCERY_PERMISSION_STABLE.sql once before testing this version.

@@ -1,0 +1,9 @@
+ADT Stock V273 Feature Build — packaged as V274 (2.75.0)
+
+- Removed the height/overflow layout that hid the Grocery Audit and Daily Sales content.
+- Grocery Audit tools now remain visible using the same safe sticky layout as Wholesale Audit.
+- Daily Sales summary, entry form, and toolbar remain visible with a safe static HTML wrapper.
+- Only the records below move while scrolling.
+- Includes the V271 stable Grocery Audit permission check.
+
+Run V271_GROCERY_PERMISSION_STABLE.sql once before testing this version.

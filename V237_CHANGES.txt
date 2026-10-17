@@ -1,0 +1,8 @@
+ADT Stock 2.37.0 (237)
+
+- Redesigned debts summary and account cards.
+- Added all/open/settled account filters.
+- Added latest transaction, status, and date to every debt account card.
+- Sorts accounts with outstanding balances first, then by latest activity.
+- Improved debt statement header and transaction timeline styling.
+- Preserved the existing customer and supplier accounting calculations.

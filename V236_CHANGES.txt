@@ -1,0 +1,8 @@
+ADT Stock 2.36.0 (236)
+
+- Removed floating add and search buttons from all application pages.
+- Added customer, supplier, and debt-account creation beside each page search field.
+- Fixed receipt/payment statement PDF generation and Android sharing.
+- Unified suppliers from shortages, products, debts, and payment records.
+- Automatically creates missing supplier ledger/payment entries without name duplication.
+- Refined the daily-sales layout for clearer totals, entry, and settlement controls.
