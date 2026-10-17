@@ -1,0 +1,5 @@
+V321.0
+- Fixed protected cloud-state Realtime event handling.
+- Cloud-state Broadcast events now trigger a serialized protected RPC refresh instead of applying an empty/metadata-only payload as state.
+- Bumped versionCode to 321 and versionName to 3.21.0.
+- Updated Realtime device-secret storage key to v321.

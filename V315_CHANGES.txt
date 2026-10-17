@@ -1,0 +1,10 @@
+ADT Stock V315 — REALTIME CONNECTION RECOVERY
+
+- Fixed live team synchronization when the app stays open in the foreground.
+- Supabase Realtime now explicitly reconnects before joining the team channel.
+- CLOSED status is handled in addition to CHANNEL_ERROR/TIMED_OUT.
+- Old Realtime channels are removed cleanly before a new channel is created.
+- Added a lightweight Realtime connection watchdog; it checks only channel state and does not poll application data.
+- Android onResume now explicitly tells the WebView to rejoin Realtime.
+- Product and audit data continue to update from Postgres Realtime events directly; no periodic product/audit polling was added.
+- Version bumped from 3.14.0 (314) to 3.15.0 (315).

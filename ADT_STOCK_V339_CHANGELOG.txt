@@ -1,0 +1,11 @@
+ADT Stock 3.39.0
+
+Changes:
+- Product Realtime events now refresh the separately rendered Manage Products modal as well as the main product list, home stats, and audit views.
+- Product INSERT events trigger an immediate authoritative product-list reconciliation after the database transaction settles, without waiting for the user to leave the current view.
+- The sync status badge is display-only again; manual click/keyboard reconnect behavior has been removed. Automatic reconnect/watchdog behavior remains, and the badge only shows connected when the realtime socket/channel are actually connected.
+
+Validation:
+- All 28 inline JavaScript blocks passed Node.js syntax checks.
+- Source ZIP archive integrity checked after packaging.
+- No APK build or live two-device Supabase test was performed in this environment.

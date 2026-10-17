@@ -1,0 +1,8 @@
+ADT Stock 2.40.0 (240)
+
+- Redesigned the home-button ordering dialog with numbered rows and clearer controls.
+- Added a live ordering counter and improved save/reset actions.
+- Refined the developer dashboard into a cleaner control center.
+- Improved developer tabs, sections, action buttons, statistics, and scrolling.
+- Changed debts from purple/bright teal to a professional dark-blue palette.
+- Preserved all developer permissions and existing backend actions.

@@ -1,0 +1,8 @@
+ADT Stock V270 (2.70.0)
+
+- Fixed the Grocery Audit button flickering for an authorized member.
+- A partial/older member-context response no longer clears newer permissions.
+- The last confirmed permission remains visible during background synchronization.
+- An explicit permission revocation from the server still hides the button normally.
+
+No new SQL is required when V267 and V268 SQL have already been installed.

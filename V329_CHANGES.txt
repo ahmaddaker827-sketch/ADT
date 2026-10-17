@@ -1,0 +1,6 @@
+ADT Stock V329 - Realtime audit reconciliation rebuild
+- Fixed audit Broadcast handling to fetch committed cloud state instead of treating metadata-only notifications as full audit payloads.
+- Reconciles team data once when the private Realtime channel successfully subscribes.
+- Removed delayed product-event fallback fetch and delayed online/visibility force-sync calls.
+- Preserved private team channel, device-bound token flow, member checks, login and RLS.
+- See V329_REALTIME_REBUILD.md for validation and deployment requirements.

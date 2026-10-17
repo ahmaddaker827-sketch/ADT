@@ -1,0 +1,5 @@
+ADT Stock v3.36.0 — targeted Realtime token request authorization fix
+
+- Added the Authorization: Bearer <Supabase anon key> header to the native POST request for adt-realtime-token, alongside the existing apikey header. This addresses the logged Supabase gateway error UNAUTHORIZED_NO_AUTH_HEADER.
+- No database schema, RLS policies, Realtime subscriptions, polling intervals, or connection-status display logic were changed.
+- Source-only change: this ZIP does not contain a built APK. Build and test the app, then confirm the Edge Function response and two-device product sync before treating the issue as resolved.

@@ -1,0 +1,10 @@
+ADT Stock V272 (2.72.0)
+
+- Includes the stable server-confirmed Grocery Audit permission fix from V271.
+- Fixed the Grocery Audit layout to match the stable Wholesale Audit behavior.
+- Summary, quick-entry card, and action buttons stay fixed.
+- Only the audited-products list scrolls.
+- Daily Sales summary, entry form, and toolbar also stay fixed.
+- Only the registered sales and settlement history scroll.
+
+Run V271_GROCERY_PERMISSION_STABLE.sql once before testing this version.

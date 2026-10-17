@@ -1,0 +1,7 @@
+ADT Stock V327 – Realtime JWT secret configuration hardening
+
+1) Updated supabase/functions/adt-realtime-token/index.ts to read the project JWT signing secret from the custom Edge Function secret ADT_REALTIME_JWT_SECRET.
+2) Kept a backward-compatible fallback to SUPABASE_JWT_SECRET if an older environment already provides it.
+3) Updated the missing-secret error to ADT_REALTIME_JWT_SECRET_NOT_CONFIGURED.
+4) Bumped Android source version to 3.27.0 / versionCode 327.
+5) No database schema, RPC, Realtime publication, RLS, or client Realtime flow was changed by this configuration-only hardening.

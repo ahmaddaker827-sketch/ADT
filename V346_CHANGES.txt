@@ -1,0 +1,4 @@
+V346 - Centered notifications
+- Toast notifications now appear near the middle/lower-middle of the screen.
+- Improved width, wrapping, padding, contrast, and shadow for mobile readability.
+- Preserved the previous empty pack-count input change.

@@ -1,0 +1,12 @@
+ADT Stock V320.0 — Secure Realtime Identity
+
+- versionCode: 320
+- versionName: 3.20.0
+- Realtime JWT issuance no longer trusts team_id/user_id sent by the client alone.
+- Successful ADT login provisions a random device credential.
+- Device credential is stored only through Android Keystore-backed AES-GCM storage.
+- Supabase stores only a bcrypt hash of the device credential.
+- Edge Function verifies team + user + device credential + approved membership before minting the Realtime JWT.
+- Realtime JWT remains short-lived (15 minutes) and is refreshed before expiry.
+- Private Broadcast remains the only active Realtime channel path.
+- Legacy postgres_changes handlers were removed from the active source mirrors.

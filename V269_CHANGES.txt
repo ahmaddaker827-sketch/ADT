@@ -1,0 +1,9 @@
+ADT Stock V269 (2.69.0)
+
+- Fixed the Connected badge flicker during background team synchronization.
+- The badge now reflects the device network connection only.
+- A failed or unauthorized section keeps retrying silently without changing the badge to Offline.
+- Added immediate and stable badge updates on Android online/offline events.
+
+Database note:
+- No new SQL is required when upgrading from V268.

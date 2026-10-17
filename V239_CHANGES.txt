@@ -1,0 +1,7 @@
+ADT Stock 2.39.0 (239)
+
+- Cloud recycle bin now always opens above the developer panel and other overlays.
+- Debts home card opens a dedicated customer/supplier choice screen.
+- Customer and supplier ledgers remain separate after selection.
+- Removed the customer/supplier tabs from inside the debts list.
+- Rebalanced debts colors to a calmer professional blue/teal palette.

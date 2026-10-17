@@ -1,0 +1,26 @@
+ADT Stock V318.0 — SECURE REALTIME BROADCAST
+
+1) Replaced client-side postgres_changes subscriptions with private Broadcast on one team topic.
+2) Added V318_REALTIME_BROADCAST_AUTH.sql:
+   - database triggers broadcast product changes, cloud-state changes, team-member changes, and team feature changes;
+   - cloud-state broadcasts contain metadata only, never state_value;
+   - private realtime.messages RLS policy checks adt_team_id + adt_user_id claims against approved team_members.
+3) Added supabase/functions/adt-realtime-token/index.ts:
+   - validates approved team membership using service-role server-side;
+   - signs a short-lived custom Realtime JWT using ADT_REALTIME_JWT_SECRET or SUPABASE_JWT_SECRET;
+   - service_role and JWT secret never enter the Android client.
+4) Android/WebView client now calls the token Edge Function and runs realtime.setAuth() before joining the private channel.
+5) Realtime token is scoped to the current team/device and refreshed before expiry; it is cleared on sign-out/leave.
+6) Product event ordering protection from V317 is retained.
+7) WebView hardening from V317 is retained.
+8) Plaintext password localStorage protection from V317 is retained.
+9) Version bumped to versionCode 318 / versionName 3.18.0.
+
+SERVER DEPLOYMENT REQUIRED
+- Deploy supabase/functions/adt-realtime-token/index.ts as function `adt-realtime-token`.
+- Configure the Edge Function secret `ADT_REALTIME_JWT_SECRET` to the Supabase project's JWT signing secret.
+- Run V318_REALTIME_BROADCAST_AUTH.sql in Supabase SQL Editor.
+- Do not put the project JWT secret, service_role key, or any secret in index.html or Android code.
+
+NOTE
+The build environment used for this audit does not contain Android SDK/Gradle, so no APK compilation is claimed here. Source-level syntax, manifest, version, realtime wiring, and ZIP integrity were checked.

@@ -1,0 +1,15 @@
+ADT Stock Pro v3.45.0 — Fix21 update
+
+Android release:
+- versionCode: 345 (previously 344)
+- versionName: 3.45.0 (previously 3.44.0)
+- applicationId preserved: com.adt.pro
+- Existing signing configuration and GitHub Actions build workflow preserved.
+
+Web app asset:
+- Replaced app/src/main/assets/index.html with the latest supplied Fix21 file:
+  ADT-V39-Fix21-Primary-Manager-Safe-Delete-History-Preserved.html
+- This includes the latest Primary Manager safe-delete/history-preservation changes and keeps the blank-by-default pack-count behavior from the supplied file.
+
+Important:
+- To install as an update over the existing app, build with the same release signing key/secrets used for the installed APK.

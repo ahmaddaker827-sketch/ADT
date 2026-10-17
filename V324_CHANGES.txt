@@ -1,0 +1,10 @@
+ADT Stock V324
+versionCode 324
+versionName 3.24.0
+
+- Structural team context teardown
+- Realtime generation guard
+- Offline authorization hardening
+- WebView URI/popup hardening
+- Safe Browsing enabled
+- HTML fallback version 324

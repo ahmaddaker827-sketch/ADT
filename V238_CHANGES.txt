@@ -1,0 +1,6 @@
+ADT Stock 2.38.0 (238)
+
+- Removed the login/create/join tabs from the authentication form permanently.
+- App reopening now shows only the three-action choice screen.
+- Selecting an action opens only its matching form.
+- Returning closes the form and restores the choice screen without replaying intro slides.

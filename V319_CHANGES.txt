@@ -1,0 +1,3 @@
+ADT Stock V319.0 — superseded by V320.
+
+V320 adds server-verified device-bound Realtime identity.
